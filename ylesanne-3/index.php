@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    <form>
+    <form action="result.php" method="post">
       <div class="form-field">
         <input type="text" name="username" placeholder="Kasutajanimi">
       </div>

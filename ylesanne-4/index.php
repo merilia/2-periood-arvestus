@@ -1,3 +1,9 @@
+<?php
+	  $name = "arvestus";
+	  $value = "Cookie on olemas";
+	  $expire = time() + (20);
+	  //setcookie($name, $value, $expire);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +12,18 @@
   </head>
 
   <body>
-    <!-- Kustuta see funktsioon (print_r() koos <pre> elemendiga) pärast seda, kui oled veendunud, et programm töötab. -->
-    <pre><?php print_r($_COOKIE); ?></pre>
+	<pre>
+		<?php 
+			// print_r($_COOKIE); 
+			
+			
+			$arvestus = isset($_COOKIE["arvestus"]) ? $_COOKIE["arvestus"] : "";
+			echo $arvestus;
+
+			if (!isset($_COOKIE["arvestus"])){
+			echo "Cookie't ei ole";
+			}
+		?>
+	</pre>
   </body>
 </html>
