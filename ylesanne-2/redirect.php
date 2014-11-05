@@ -6,6 +6,11 @@
   </head>
 
   <body>
+  	<?php 
+  	function redirect_to($asukoht) {
+	header("Location: " . $asukoht);
+	}
+	 ?>
     <p>Kui oled lõpetanud, siis peaks avaleht suunama siia lehele.</p>
   </body>
 </html>

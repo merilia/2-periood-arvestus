@@ -1,3 +1,5 @@
+<?php require "redirect.php"; ?>
+<?php redirect_to('redirect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
