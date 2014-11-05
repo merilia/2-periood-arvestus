@@ -1,3 +1,6 @@
+<?php session_start(); ?>
+<?php  $username = $_SESSION["username"]; 
+	   $password = $_SESSION["password"]; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,9 +9,20 @@
   </head>
 
   <body>
-    <!-- Kustuta see funktsioon (print_r() koos <pre> elemendiga) pärast seda, kui oled veendunud, et programm töötab. -->
-    <pre><?php print_r($_SESSION); ?></pre>
-
     <a href="index.php">Mine tagasi</a>
+
+    <?php 
+    $validUsername = $_SESSION["username"];
+    $validPassword = $_SESSION["password"];
+
+    // katsetasin nii, et muutsin indexis "testi" "Testiks" ning sain else'i tulemuse
+
+    if (($validUsername == "Merili") && ($validPassword == "test")){
+    	echo "Kasutajanimi ja parool on õiged.";
+    }
+    	else{
+    		echo "Kasutajanimi ja/või parool ei klapi.";
+    	}
+    ?>
   </body>
 </html>
