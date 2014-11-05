@@ -6,7 +6,11 @@
   </head>
 
   <body>
-  	<?php $username= "Merili"; $age = "21"; ?>
-  	<a href="result.php">Teine leht</a>
+  	<?php 
+	  	$link_file = "result.php"; 
+	  	$username= "Merili"; 
+	  	$age = "21"; 
+  	?>
+  		<a href="<?php echo $link_file . '?username=' . $username . '&age=' . $age; ?>">Teine leht</a>
   </body>
 </html>
